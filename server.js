@@ -37,8 +37,9 @@ const listener = app.listen(process.env.PORT, () => {
 
 function formatDate(input) {
   let date;
+  // if (is number)
   if (/^\d+$/.test(input)) {
-    date = new Date(parseInt(input) * 1000);
+    date = new Date(parseInt(input));
   } else {
     date = new Date(input);
   }
